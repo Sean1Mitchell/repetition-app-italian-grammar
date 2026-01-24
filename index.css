@@ -112,6 +112,11 @@ body {
   border: none;
   background: transparent;
   align-self: left;
+  color: inherit;
+}
+
+#backButton:visited {
+  color: inherit;
 }
 
 #topicTitle {
