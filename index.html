@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Spaced Repetition - Italian Grammar</title>
+</head>
+<body>
+
+    <main>
+
+        <section id="homeView">
+          <div class="homeView-title">
+            <h2>Italian Recall</h2>
+            <p>Spaced Repetition for Grammar Mastery!</p>
+          </div>
+          
+
+          <div class="topic-list">
+            <button data-topic="all">All Cards</button>
+
+            <div class="divider"></div>
+
+            <button data-topic="definite-articles">Definite Articles</button>
+            <button data-topic="indefinite-articles">Indefinite Articles</button>
+            <button data-topic="descriptive-adjectives">Descriptive Adjectives</button>
+            <button data-topic="possessive-adjectives">Possessive Adjectives</button>
+            <button data-topic="noun-vs-verb">Nouns vs Verbs</button>
+          </div>
+        </section>
+
+        <!-- CARD SESSION (REUSED FOR ALL TOPICS) -->
+        <section id="sessionView" hidden>
+
+          <!-- HEADER -->
+          <header class="session-header">
+            <div class="session-header-left">
+              <button id="backButton">← Home</button>
+            </div>
+            <div class="session-header-right">
+              <h2 id="topicTitle"></h2>
+            </div>
+          </header>
+
+          <!-- PROGRESS -->
+          <div class="progress-container">
+            <span id="progressText"></span>
+            <div class="progress-bar">
+              <div id="progressFill"></div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div class="card">
+            <div class="question" id="questionText"></div>
+
+            <div class="answers">
+              <button class="answer"></button>
+              <button class="answer"></button>
+              <button class="answer"></button>
+              <button class="answer"></button>
+            </div>
+          </div>
+
+          <!-- FEEDBACK -->
+          <div class="feedback" id="feedback" hidden>
+            <p id="feedbackText"></p>
+            <button id="nextButton">Next</button>
+          </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
