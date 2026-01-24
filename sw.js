@@ -1,11 +1,11 @@
 const CACHE_NAME = 'italian-recall-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/index.css',
-  '/app.js',
-  '/data.js',
-  '/manifest.json'
+  './',
+  './index.html',
+  './index.css',
+  './app.js',
+  './data.js',
+  './manifest.json'
 ];
 
 // Install event - cache files
@@ -69,7 +69,7 @@ self.addEventListener('fetch', event => {
       .catch(() => {
         // Offline fallback - serve index.html for navigation requests
         if (event.request.mode === 'navigate') {
-          return caches.match('/index.html');
+          return caches.match('./index.html');
         }
       })
   );
