@@ -86,6 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 300px;
 }
 
 /* ---------- HEADER ---------- */
@@ -240,47 +241,8 @@ body {
     padding: 12px;
   }
 
-  .topic-list button {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
-
-  .card {
-    width: 100%;
-    padding: 16px;
-  }
-
-  .feedback {
-    width: 100%;
-  }
-
-  .question {
-    font-size: 1.2rem;
-  }
-
-  .answers button {
-    padding: 10px;
-    font-size: 0.95rem;
-  }
-
-  #nextButton {
-    padding: 10px;
-    font-size: 0.95rem;
-  }
-
-  #topicTitle {
-    font-size: 1rem;
-  }
-
-  .progress-container {
-    gap: 4px;
-  }
-
-  #progressText {
-    font-size: 0.85rem;
-  }
-
   .session-header {
     gap: 8px;
   }
+
 }
