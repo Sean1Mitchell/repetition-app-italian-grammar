@@ -35,6 +35,16 @@ function showSession(topic, displayTitle) {
 let currentCards = [];
 let currentIndex = 0;
 
+// Fisher-Yates shuffle to randomize answer order
+function shuffleArray(array) {
+  const shuffled = [...array]; // Create a copy
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 function startSession(topic) {
   // NOTE: This assumes data.js exposes something like `CARD_DATA`
   // Adjust mapping as needed to match your data structure
@@ -62,7 +72,9 @@ function renderCard() {
   const answersContainer = document.querySelector(".answers");
   answersContainer.innerHTML = "";
 
-  card.answers.forEach(answer => {
+  const shuffledAnswers = shuffleArray(card.answers);
+
+  shuffledAnswers.forEach(answer => {
     const btn = document.createElement("button");
     btn.className = "answer";
     btn.textContent = answer.text;

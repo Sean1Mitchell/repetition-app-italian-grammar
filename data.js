@@ -207,7 +207,7 @@ const CARD_DATA = {
         { text: "the (masculine)", correct: false },
         { text: "the (feminine)", correct: false }
       ],
-      explanation: "‘Un’ is used for masculine nouns starting with most consonants or vowels."
+      explanation: "‘un’ is used for masculine nouns starting with most consonants or vowels."
     }
   ],
 
