@@ -198,16 +198,118 @@ const CARD_DATA = {
   // --------------------------------------
   // INDEFINITE ARTICLES
   // --------------------------------------
-  "indefinite-articles": [
+    "indefinite-articles": [
+
+    // ------------------------------------
+    //  SPECIFIC "A/AN" VERSIONS
+    // ------------------------------------
+    {
+      question: "when is \"un\" used?",
+      answers: [
+        { text: "easy sound consonant", correct: true },
+        { text: "hard sound consonant", correct: false },
+        { text: "vowel", correct: false },
+        { text: "any consonant", correct: false }
+      ],
+      explanation: "'un' is used for masculine singular nouns starting with an easy sound consonant."
+    },
+    {
+      question: "when is \"uno\" used?",
+      answers: [
+        { text: "easy sound consonant", correct: false },
+        { text: "hard sound consonant", correct: true },
+        { text: "vowel", correct: false },
+        { text: "any consonant", correct: false }
+      ],
+      explanation: "'uno' is used for masculine singular nouns starting with a hard sound consonant."
+    },
+    {
+      question: "when is \"una\" used?",
+      answers: [
+        { text: "vowel", correct: false },
+        { text: "easy sound consonant", correct: false },
+        { text: "any consonant", correct: true },
+        { text: "hard sound consonant", correct: false }
+      ],
+      explanation: "'una' is used for feminine singular nouns starting with any consonant."
+    },
+    {
+      question: "when is \"un'\" used (feminine)?",
+      answers: [
+        { text: "any consonant", correct: false },
+        { text: "hard sound consonant", correct: false },
+        { text: "vowel", correct: true },
+        { text: "easy sound consonant", correct: false }
+      ],
+      explanation: "'un'' is used for feminine singular nouns starting with a vowel."
+    },
+
+    // ----------------------------------------
+    //  SPECIFIC "A/AN" VERSIONS (GENDER/NUMBER)
+    // ----------------------------------------
     {
       question: "un",
       answers: [
-        { text: "a / an (masculine)", correct: true },
-        { text: "a / an (feminine)", correct: false },
-        { text: "the (masculine)", correct: false },
-        { text: "the (feminine)", correct: false }
+        { text: "a / an (feminine singular)", correct: false },
+        { text: "a / an (masculine singular)", correct: true },
+        { text: "a / an (masculine plural)", correct: false },
+        { text: "a / an (feminine plural)", correct: false }
       ],
-      explanation: "‘un’ is used for masculine nouns starting with most consonants or vowels."
+      explanation: "'un' is used for masculine singular nouns starting with an easy sound consonant."
+    },
+    {
+      question: "uno",
+      answers: [
+        { text: "a / an (feminine singular)", correct: false },
+        { text: "a / an (masculine singular)", correct: true },
+        { text: "a / an (masculine plural)", correct: false },
+        { text: "a / an (feminine plural)", correct: false }
+      ],
+      explanation: "'uno' is used for masculine singular nouns starting with a hard sound consonant."
+    },
+    {
+      question: "una",
+      answers: [
+        { text: "a / an (masculine singular)", correct: false },
+        { text: "a / an (feminine singular)", correct: true },
+        { text: "a / an (masculine plural)", correct: false },
+        { text: "a / an (feminine plural)", correct: false }
+      ],
+      explanation: "'una' is used for feminine singular nouns starting with any consonant."
+    },
+    {
+      question: "un'",
+      answers: [
+        { text: "a / an (masculine singular)", correct: false },
+        { text: "a / an (feminine singular)", correct: true },
+        { text: "a / an (masculine plural)", correct: false },
+        { text: "a / an (feminine plural)", correct: false }
+      ],
+      explanation: "'un'' is used for feminine singular nouns starting with a vowel."
+    },
+
+    // ------------------------------------------------
+    //  SPECIFIC "A/AN" VERSIONS (CONSONANT/VOWEL TYPES)
+    // ------------------------------------------------
+    {
+      question: "easy sound consonant",
+      answers: [
+        { text: "any adjective", correct: false },
+        { text: "x,y,z,gn,pn,ps,sc", correct: false },
+        { text: "b,c,d,f,g,h,l,m,n,p,s,t,v,w,x,y,z", correct: true },
+        { text: "a,e,i,o,u", correct: false }
+      ],
+      explanation: "An easy sound consonant is a consonant that is easy to pronounce."
+    },
+    {
+      question: "hard sound consonant",
+      answers: [
+        { text: "a,e,i,o,u", correct: false },
+        { text: "b,c,d,f,g,h,l,m,n,p,s,t,v,w,x,y,z", correct: false },
+        { text: "any adjective", correct: false },
+        { text: "x,y,z,gn,pn,ps,sc", correct: true }
+      ],
+      explanation: "A hard sound consonant is a consonant or consonant cluster that is harder to pronounce."
     }
   ],
 
@@ -215,16 +317,97 @@ const CARD_DATA = {
   // DESCRIPTIVE ADJECTIVES
   // --------------------------------------
   "descriptive-adjectives": [
+
+
+    // ------------------------------------
+    // NOUNS ENDING IN -O
+    // ------------------------------------
     {
-      question: "grande",
+      question: "Which letter replaces the -o in \"Alto\" for masculine singular nouns?",
       answers: [
-        { text: "big / large", correct: true },
-        { text: "small", correct: false },
-        { text: "fast", correct: false },
-        { text: "old", correct: false }
+        { text: "o", correct: true },
+        { text: "a", correct: false },
+        { text: "i", correct: false },
+        { text: "e", correct: false }
       ],
-      explanation: "‘Grande’ means big or large and agrees in gender and number."
+      explanation: "‘Alto’ means tall and agrees in gender and number."
+    },
+    {
+      question: "Which letter replaces the -o in \"bello\" for masculine plural nouns?",
+      answers: [
+        { text: "o", correct: false },
+        { text: "a", correct: false },
+        { text: "i", correct: true },
+        { text: "e", correct: false }
+      ],
+      explanation: "‘Bello’ means beautiful and agrees in gender and number."
+    },
+    {
+      question: "Which letter replaces the -o in \"rosso\" for feminine singular nouns?",
+      answers: [
+        { text: "o", correct: false },
+        { text: "a", correct: true },
+        { text: "i", correct: false },
+        { text: "e", correct: false }
+      ],
+      explanation: "‘Rosso’ means red and agrees in gender and number."
+    },
+    {
+      question: "Which letter replaces the -o in \"stanco\" for feminine plural nouns?",
+      answers: [
+        { text: "o", correct: false },
+        { text: "a", correct: false },
+        { text: "i", correct: false },
+        { text: "e", correct: true }
+      ],
+      explanation: "‘Stanco’ means tired and agrees in gender and number."
+    },
+
+
+    // ------------------------------------
+    // NOUNS ENDING IN -E
+    // ------------------------------------
+    {
+      question: "Which letter replaces the -e in \"grande\" for masculine singular nouns?",
+      answers: [
+        { text: "e", correct: true },
+        { text: "i", correct: false },
+        { text: "a", correct: false },
+        { text: "o", correct: false }
+      ],
+      explanation: "‘Grande’ means big and agrees in gender and number."
+    },
+    {
+      question: "Which letter replaces the -e in \"interessante\" for masculine plural nouns?",
+      answers: [
+        { text: "e", correct: false },
+        { text: "i", correct: true },
+        { text: "a", correct: false },
+        { text: "o", correct: false }
+      ],
+      explanation: "‘Interessante’ means interesting and agrees in gender and number."
+    },
+    {
+      question: "Which letter replaces the -e in \"felice\" for feminine singular nouns?",
+      answers: [
+        { text: "e", correct: true },
+        { text: "i", correct: false },
+        { text: "a", correct: false },
+        { text: "o", correct: false }
+      ],
+      explanation: "‘Felice’ means happy and agrees in gender and number."
+    },
+    {
+      question: "Which letter replaces the -e in \"giovane\" for feminine plural nouns?",
+      answers: [
+        { text: "e", correct: false },
+        { text: "i", correct: true },
+        { text: "a", correct: false },
+        { text: "o", correct: false }
+      ],
+      explanation: "‘Giovane’ means young and agrees in gender and number."
     }
+
   ],
 
   // --------------------------------------
