@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Spaced Repetition - Italian Grammar</title>
+</head>
+
+<body>
+
+  <main>
+
+    <section id="homeView">
+      <div class="homeView-title">
+        <h2>Corporate Reporting</h2>
+        <p>Spaced Repetition for Mastery!</p>
+      </div>
+
+
+      <div class="topic-list">
+        <button data-topic="all">All Cards</button>
+
+        <div class="divider"></div>
+
+        <button data-topic="intangible-assets">Intangible Assets</button>
+        <button data-topic="tangible-non-current-assets">Tangible Non-Current Assets</button>
+        <button data-topic="impairment-of-assets">Impairment of Assets</button>
+        <button data-topic="provisions">Provisions</button>
+        <button data-topic="financial-instruments">Financial Instruments</button>
+        <button data-topic="group-financial-statements">Group Financial Statements</button>
+        <button data-topic="corporate-insolvency">Corporate Insolvency</button>
+        <button data-topic="financial-reporting-environment">Financial Reporting Environment</button>
+      </div>
+    </section>
+
+    <!-- CARD SESSION (REUSED FOR ALL TOPICS) -->
+    <section id="sessionView" hidden>
+
+      <!-- HEADER -->
+      <header class="session-header">
+        <div class="session-header-left">
+          <button id="backButton">← Home</button>
+        </div>
+        <div class="session-header-right">
+          <h2 id="topicTitle"></h2>
+        </div>
+      </header>
+
+      <!-- PROGRESS -->
+      <div class="progress-container">
+        <span id="progressText"></span>
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-inner">
+
+          <!-- Front -->
+          <div class="flashcard-front">
+            <div class="question" id="questionText"></div>
+            <p class="tap-hint">Tap to reveal answer</p>
+          </div>
+
+          <!-- Back -->
+          <div class="flashcard-back">
+            <div class="answer-text" id="answerText"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- FEEDBACK -->
+      <div class="feedback" id="feedback">
+        <button id="nextButton">Next</button>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    // Register service worker for PWA functionality
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(registration => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+
+</body>
+
+</html>
