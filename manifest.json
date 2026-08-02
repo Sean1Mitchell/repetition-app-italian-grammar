@@ -53,8 +53,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/repetition-app-italian-grammar/index.html",
+  "scope": "/repetition-app-italian-grammar/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000"
