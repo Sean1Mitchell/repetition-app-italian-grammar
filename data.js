@@ -170,45 +170,38 @@ const CARD_DATA = {
   "financial-instruments": [
 
     {
-      question: "What are the four forms of financial instruments?",
-      answer: "debt, debt/equity(elected), debt(elected)/equity, and liability."
+      question: "What is a financial instrument?",
+      answer: "A contract that gives one entity a financial asset and another entity a financial liability or equity instrument."
     },
     {
-      question: "",
-      answer: ""
+      question: "What determines whether an instrument is a liability or equity?",
+      answer: "Whether issuer has an obligation to deliver cash or another financial asset."
     },
     {
-      question: "",
-      answer: ""
+      question: "When is an instrument classified as a financial liability?",
+      answer: "IS an obligation to transfer cash or another financial asset."
     },
     {
-      question: "",
-      answer: ""
+      question: "When is an instrument classified as equity?",
+      answer: "IS NOT an obligation to transfer cash or another financial asset."
     },
     {
-      question: "",
-      answer: ""
+      question: "When is a debt instrument measured at amortised cost?",
+      answer: "hold to collect, cash flows are solely principal and interest (SPPI)."
     },
     {
-      question: "",
-      answer: ""
+      question: "When is a debt instrument measured at FVOCI?",
+      answer: "hold to collect and sell, cash flows are solely principal and interest (SPPI)."
     },
     {
-      question: "",
-      answer: ""
+      question: "When is a financial asset measured at FVTPL?",
+      answer: "When it fails the SPPI test or is elected at FVTPL."
     },
     {
-      question: "",
-      answer: ""
-    },
-    {
-      question: "",
-      answer: ""
-    },
-    {
-      question: "",
-      answer: ""
-    },
+      question: "what are the two treatments of equity?",
+      answer: "FVTPL (default) or FVOCI (elected at initial recognition)."
+    }
+
   ],
 
   "group-financial-statements": [
